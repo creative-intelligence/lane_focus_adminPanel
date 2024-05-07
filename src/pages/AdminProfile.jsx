@@ -5,7 +5,7 @@ const Profile = () => {
   const [name, setName] = useState('Admin');
   const [email, setEmail] = useState('admin@example.com');
   const [bio, setBio] = useState('Lorem ipsum dolor sit amet, consectetur adipiscing elit.');
-  const [image, setImage] = useState('https://via.placeholder.com/150'); L
+  const [image, setImage] = useState('https://via.placeholder.com/150'); 
 
 
   const handleEditProfile = () => {
