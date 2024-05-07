@@ -7,6 +7,8 @@ import CircleDetail from "./pages/CircleDetail";
 import Complains from "./pages/Complains";
 import Content from "./pages/Content";
 import DriverProfile from "./pages/DriverProfile";
+import ComplainBox from "./pages/ComplainBox";
+import Profile from "./pages/AdminProfile";
 
 function App() {
   return (
@@ -16,11 +18,14 @@ function App() {
           <Route path="/" element={<RootLayout />}>
             <Route index element={<Home />} />
             <Route path="/drivers" element={<Drivers />} />
+            <Route path="/drivers/details/:id" element={<DriverProfile />} />
             <Route path="/circles" element={<Circles />} />
             <Route path="/circles/details/:id" element={<CircleDetail />} />
             <Route path="/complains" element={<Complains />} />
+            <Route path="/complains/details/:id" element={<ComplainBox />} />
             <Route path="/content" element={<Content />} />
-            <Route path="/drivers/details/:id" element={<DriverProfile />} />
+            <Route path="/profile" element={<Profile />} />
+          
           </Route>
         </Routes>
       </BrowserRouter>

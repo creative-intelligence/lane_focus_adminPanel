@@ -29,10 +29,10 @@ export default function Header({ header }) {
                 </button>
               </div>
               {/* <div className="absolute items-center z-20"> */}
-              <div className={`z-50 ${drop ? null : 'hidden'} absolute w-full px-4 my-4 text-gray-950 font-medium list-none bg-white backdrop-blur-md bg-opacity-10 divide-y divide-gray-100 rounded-lg shadow`}>
+              <div className={`z-50 ${drop ? null : 'hidden'} absolute w-full px-2 my-4 text-gray-950 font-medium list-none bg-white backdrop-blur-md bg-opacity-10 divide-y divide-gray-100 rounded-lg shadow`}>
                 <ul className="py-2" aria-labelledby="user-menu-button">
                   <li>
-                    <Link to="/profile" className="block px-4 py-2 text-sm hover:bg-gray-250 hover:text-white hover:rounded-md ">Profile</Link>
+                    <Link to="/profile" className="block px-4 py-2 text-sm hover:bg-background hover:text-black hover:rounded-md ">Profile</Link>
                   </li>
                 </ul>
               </div>

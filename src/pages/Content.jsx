@@ -38,7 +38,7 @@ export default function Content() {
   return (
     <div>
       <Header header={"Manage settings"} />
-      <div className="max-w-screen-2xl mx-auto bg-white lg:py-10">
+      <div className="max-w-screen-2xl lg:mx-9 overflow-x-auto drop-shadow-xl bg-white lg:py-10">
         <div className="mx-4 sm:mx-9 my-3">
           <div className="space-y-4">
             <div>

@@ -3,12 +3,48 @@ import Header from "../layouts/partials/header";
 import { Link } from "react-router-dom";
 
 export default function Complains() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [complaints, setComplaints] = useState([
+    {
+      id: 1,
+      title: "Unethical Behaviour",
+      type: "Lane",
+      complainBy: "Jane Doe",
+      status: "Pending",
+      date: "02/03/23",
+      description: "Description of unethical behavior complaint.",
+    },
+    {
+      id: 2,
+      title: "Late Pickup",
+      type: "Service",
+      complainBy: "John Smith",
+      status: "Pending",
+      date: "02/05/23",
+      description: "Description of late pickup complaint.",
+    },
+    {
+      id: 3,
+      title: "Rash Driving",
+      type: "Lane",
+      complainBy: "Alice Johnson",
+      status: "Pending",
+      date: "02/06/23",
+      description: "Description of rash driving complaint.",
+    },
+  ]);
+
+  const handleComplaintViewed = (id) => {
+    setComplaints((prevComplaints) =>
+      prevComplaints.map((complaint) =>
+        complaint.id === id ? { ...complaint, status: "Viewed" } : complaint
+      )
+    );
+  };
 
   return (
     <div>
       <Header header={"Complains/Reports"} />
-      <div className="max-w-screen-2xl mx-auto">
+      <div className="max-w-screen-2xl mx-auto overflow-x-auto drop-shadow-xl">
         <div className="mx-4 sm:mx-9 my-5">
           <div className="flex justify-between bg-white py-4 px-6 rounded">
             <div className="relative flex items-center">
@@ -46,25 +82,43 @@ export default function Complains() {
                     <th className="px-6 py-3">Complaint by</th>
                     <th className="px-6 py-3">Status</th>
                     <th className="px-6 py-3">Date & Time</th>
-                    <th className="px-6 py-3"></th>
+                    <th className="px-6 py-3">Actions</th>
                   </tr>
                 </thead>
 
                 <tbody>
-                  {[...Array(5)].map((_, index) => (
-                    <tr key={index} className="border-b hover:bg-gray-100">
-                      <td className="px-6 py-4">Unethical Behaviour</td>
-                      <td className="px-6 py-4">Lane</td>
-                      <td className="px-6 py-4">Jane Doe</td>
-                      <td className="px-6 py-4">
-                        <span className="inline-block px-2 py-1 font-semibold text-green-900 bg-green-200 rounded-full">
-                          Active
+                  {complaints.map((complaint) => (
+                    <tr
+                      key={complaint.id}
+                      className="border-b hover:bg-gray-100"
+                    >
+                      <td className="px-6 py-4 text-center">
+                        {complaint.title}
+                      </td>
+                      <td className="px-6 py-4 text-center">
+                        {complaint.type}
+                      </td>
+                      <td className="px-6 py-4 text-center">
+                        {complaint.complainBy}
+                      </td>
+                      <td className="px-6 py-4 text-center">
+                        <span
+                          className={`inline-block px-2 py-1 font-semibold ${
+                            complaint.status === "Pending"
+                              ? "text-yellow-900 bg-yellow-200"
+                              : "text-green-900 bg-green-200"
+                          } rounded-full`}
+                        >
+                          {complaint.status}
                         </span>
                       </td>
-                      <td className="px-6 py-4">02/03/23</td>
-                      <td className="px-6 py-4">
+                      <td className="px-6 py-4 text-center">
+                        {complaint.date}
+                      </td>
+                      <td className="px-6 py-4 text-center">
                         <Link
-                          to="/complains/details/1"
+                          to={`/complains/details/${complaint.id}`}
+                          onClick={handleComplaintViewed}
                           className="px-3 py-1 text-sm font-medium text-blue-600 bg-blue-100 rounded hover:bg-blue-200"
                         >
                           View
