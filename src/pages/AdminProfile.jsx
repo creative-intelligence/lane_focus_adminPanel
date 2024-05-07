@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 
 const Profile = () => {
-  // State variables for profile information
+ 
   const [name, setName] = useState('Admin');
   const [email, setEmail] = useState('admin@example.com');
   const [bio, setBio] = useState('Lorem ipsum dolor sit amet, consectetur adipiscing elit.');
-  const [image, setImage] = useState('https://via.placeholder.com/150'); // Placeholder image URL
+  const [image, setImage] = useState('https://via.placeholder.com/150'); L
 
-  // Function to handle profile editing
+
   const handleEditProfile = () => {
-    // Logic to save the edited profile information
+    
     console.log('Profile information updated:', { name, email, bio, image });
-    // You can add logic to send this information to the server for updating the profile
+   
   };
 
   return (
