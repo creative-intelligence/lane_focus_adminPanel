@@ -81,7 +81,7 @@ export default function Complains() {
                     <th className="px-6 py-3">Type</th>
                     <th className="px-6 py-3">Complaint by</th>
                     <th className="px-6 py-3">Status</th>
-                    <th className="px-6 py-3">Date & Time</th>
+                    <th className="px-6 py-3">Date </th>
                     <th className="px-6 py-3">Actions</th>
                   </tr>
                 </thead>

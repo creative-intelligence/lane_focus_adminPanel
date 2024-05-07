@@ -55,7 +55,7 @@ export default function ComplainBox() {
             </p>
             <p className="text-gray-700 mb-2">Status: {complaint.status}</p>
             <p className="text-gray-700 mb-2">
-              Date & Time: {complaint.date}
+              Date: {complaint.date}
             </p>
             <p className="text-gray-700">
               Description: {complaint.description}
