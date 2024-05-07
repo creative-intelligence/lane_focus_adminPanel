@@ -10,7 +10,7 @@ export default function Header({ header }) {
   // console.log(users)
   return (
     <div>
-      <div className='bg-background' >
+      <div className='bg-white' >
         <nav className="text-gray-350">
           <div className=" flex flex-wrap items-center justify-between px-4 py-9 sm:p-8">
             <div className="flex items-center drop-shadow-lg">
