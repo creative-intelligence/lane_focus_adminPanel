@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import Header from "../layouts/partials/header";
 import { FaArrowLeft } from "react-icons/fa6";
+import Administrators from "./Administrators";
 
 export default function DriverProfile() {
   const { id } = useParams();
@@ -31,6 +32,8 @@ export default function DriverProfile() {
       insurance: "ABC Insurance",
       gender: "Male",
       registeredOn: "2022-01-01",
+      administrator:"Administrator 1",
+      circle:"Circle A"
     },
     {
       id: 2,
@@ -42,6 +45,8 @@ export default function DriverProfile() {
       insurance: "XYZ Insurance",
       gender: "Male",
       registeredOn: "2021-12-15",
+      administrator:"Administrator 3",
+      circle:"Circle B"
     },
     {
       id: 3,
@@ -53,6 +58,8 @@ export default function DriverProfile() {
       insurance: "DEF Insurance",
       gender: "Male",
       registeredOn: "2022-02-10",
+      administrator:"Administrator 1",
+      circle:"Circle C"
     },
     {
       id: 4,
@@ -64,6 +71,8 @@ export default function DriverProfile() {
       insurance: "GHI Insurance",
       gender: "Male",
       registeredOn: "2021-11-30",
+      administrator:"Administrator 2",
+      circle:"Circle A"
     },
     {
       id: 5,
@@ -75,9 +84,10 @@ export default function DriverProfile() {
       insurance: "JKL Insurance",
       gender: "Male",
       registeredOn: "2022-03-05",
+      administrator:"Administrator 2",
+      circle:"Circle B"
     },
   ];
-
   const driver = drivers.find((driver) => driver.id === parseInt(id));
 
   if (!driver) {
@@ -128,17 +138,24 @@ export default function DriverProfile() {
               </div>
             </div>
             <div className="bg-white max-w-2xl px-4 xl:px-6 py-5">
-              <div className="flex items-center gap-4">
-                <div>
-                  <img
-                    className="w-16 h-16 rounded-full ring-2 ring-gray-250 object-cover border"
-                    src={`https://randomuser.me/api/portraits/men/${driver.id}.jpg`}
-                    alt="users"
-                  />
+              <div className="flex justify-between ">
+                <div className="flex items-center gap-4">
+                  <div>
+                    <img
+                      className="w-16 h-16 rounded-full ring-2 ring-gray-250 object-cover border"
+                      src={`https://randomuser.me/api/portraits/men/${driver.id}.jpg`}
+                      alt="users"
+                    />
+                  </div>
+                  <div>
+                    <h2 className="text-xl font-semibold">{driver.name}</h2>
+                    <p className="text-xs text-gray-600">{driver.email}</p>
+                  </div>
                 </div>
-                <div>
-                  <h2 className="text-xl font-semibold">{driver.name}</h2>
-                  <p className="text-xs text-gray-600">{driver.email}</p>
+
+                <div className="">
+                  <h2 className="text-lg font-semibold text-gray-800">{driver.administrator}</h2>
+                  <p className="text-sm text-gray-600 text-center">{driver.circle}</p>
                 </div>
               </div>
             </div>

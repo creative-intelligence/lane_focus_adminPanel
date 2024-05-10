@@ -1,33 +1,33 @@
 import { Link } from "react-router-dom";
 import Header from "../layouts/partials/header";
 
-export default function Circles() {
-  
-  const circles = [
+export default function Administrators() {
+  const administrators = [
     {
       id: 1,
-      name: "Circle A",
-      zone: "Location ABC",
-      drivers:"2"
+      name: "Administrator 1",
+      plan: "$ Monthly",
+      circles: "3",
     },
     {
       id: 2,
-      name: "Circle B",
-      zone: "Location EFG",
-      drivers:"2"
+      name: "Administrator 2",
+      plan: "$ Weekly",
+      circles: "3",
     },
     {
       id: 3,
-      name: "Circle C",
-      zone: "Location XYZ",
-      drivers:"2"
+      name: "Administrator 3",
+      plan: "$ Yearly",
+      circles: "3",
     },
-    
+   
+      
   ];
 
   return (
     <div>
-      <Header header={"Manage Circles"} />
+      <Header header={"Manage Adminintrators"} />
       <div className="max-w-screen-2xl mx-auto">
         <div className="mx-4 sm:mx-9 my-3">
           <div className="my-10">
@@ -39,10 +39,10 @@ export default function Circles() {
                       Name
                     </th>
                     <th scope="col" className="px-6 py-3">
-                      Zone
+                      Plan
                     </th>
-                    <th scope="col" className="px-6 py-3">
-                      #No  of Drivers
+                    <th scope="col" className="px-6 py-3 ">
+                      #No of Circles
                     </th>
                     <th scope="col" className="px-6 py-3">
                       Details
@@ -50,23 +50,20 @@ export default function Circles() {
                   </tr>
                 </thead>
                 <tbody>
-                  {circles.map((circle) => (
+                  {administrators.map((admin) => (
                     <tr
-                      key={circle.id}
+                      key={admin.id}
                       className="bg-white border-b hover:bg-gray-150/30"
+                      x
                     >
                       <td className="px-6 py-4 whitespace-nowrap">
-                        {circle.name}
+                        {admin.name}
                       </td>
-                      <td className="px-6 py-4">
-                        {circle.zone}
-                      </td>
-                      <td className="px-16 py-4">
-                        {circle.drivers}
-                      </td>
+                      <td className="px-6 py-4">{admin.plan}</td>
+                      <td className="px-16 py-4 ">{admin.circles}</td>
                       <td className="px-6 py-4">
                         <Link
-                          to={`/administrators/circles/details/${circle.id}`}
+                          to={`/administrators/details/${admin.id}`}
                           className="font-medium bg-primary text-black  px-3 py-1 rounded-md hover:text-gray-250 bg-opacity-20"
                         >
                           Details

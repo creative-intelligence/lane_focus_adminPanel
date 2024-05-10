@@ -7,7 +7,6 @@ export default function Complains() {
     {
       id: 1,
       title: "Unethical Behaviour",
-      type: "Lane",
       complainBy: "Jane Doe",
       status: "Pending",
       date: "02/03/23",
@@ -16,7 +15,6 @@ export default function Complains() {
     {
       id: 2,
       title: "Late Pickup",
-      type: "Service",
       complainBy: "John Smith",
       status: "Pending",
       date: "02/05/23",
@@ -25,7 +23,6 @@ export default function Complains() {
     {
       id: 3,
       title: "Rash Driving",
-      type: "Lane",
       complainBy: "Alice Johnson",
       status: "Pending",
       date: "02/06/23",
@@ -46,35 +43,35 @@ export default function Complains() {
       <Header header={"Complains/Reports"} />
       <div className="max-w-screen-2xl mx-auto overflow-x-auto drop-shadow-xl">
         <div className="mx-4 sm:mx-9 my-5">
-        <div className='flex flex-col w-full bg-white py-3 px-3 rounded-lg sm:w-auto sm:flex-row sm:items-center gap-4'>
-              <div className='relative w-full sm:w-auto'>
-                <div className='absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none'>
-                  <svg
-                    className='w-4 h-4 text-gray-500 dark:text-gray-400'
-                    aria-hidden='true'
-                    xmlns='http://www.w3.org/2000/svg'
-                    fill='none'
-                    viewBox='0 0 20 20'
-                  >
-                    <path
-                      stroke='currentColor'
-                      strokeLinecap='round'
-                      strokeLinejoin='round'
-                      strokeWidth='2'
-                      d='m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z'
-                    />
-                  </svg>
-                </div>
-                <input
-                  type='search'
-                  id='default-search'
-                  className='block w-full px-4 py-2 outline-none pl-10 text-sm text-gray-900 border border-gray-300 rounded-full focus:ring-blue-500 focus:border-blue-500'
-                  placeholder='Search report...'
-                  required
-                />
+          <div className="flex flex-col w-full bg-white py-3 px-3 rounded-lg sm:w-auto sm:flex-row sm:items-center gap-4">
+            <div className="relative w-full sm:w-auto">
+              <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                <svg
+                  className="w-4 h-4 text-gray-500 dark:text-gray-400"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                  />
+                </svg>
               </div>
-              {/* <Filterdropdown /> */}
+              <input
+                type="search"
+                id="default-search"
+                className="block w-full px-4 py-2 outline-none pl-10 text-sm text-gray-900 border border-gray-300 rounded-full focus:ring-blue-500 focus:border-blue-500"
+                placeholder="Search report..."
+                required
+              />
             </div>
+            {/* <Filterdropdown /> */}
+          </div>
 
           <div className="my-5">
             <div className="overflow-x-auto bg-white rounded-lg shadow">
@@ -82,7 +79,7 @@ export default function Complains() {
                 <thead className="text-xs text-gray-700 uppercase border-b-2 bg-white">
                   <tr>
                     <th className="px-6 py-3">Title</th>
-                    <th className="px-6 py-3">Type</th>
+
                     <th className="px-6 py-3">Complaint by</th>
                     <th className="px-6 py-3">Status</th>
                     <th className="px-6 py-3">Date </th>
@@ -99,9 +96,7 @@ export default function Complains() {
                       <td className="px-6 py-4 text-center">
                         {complaint.title}
                       </td>
-                      <td className="px-6 py-4 text-center">
-                        {complaint.type}
-                      </td>
+
                       <td className="px-6 py-4 text-center">
                         {complaint.complainBy}
                       </td>

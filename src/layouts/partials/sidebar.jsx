@@ -42,7 +42,7 @@ export default function Sidebar() {
               <li className='py-3'>
                 <Link to='/' className="flex items-center justify-center py-2 px-5 rounded-lg">
                   {/* <img src={logo} alt='....' className='h-16 object-cover drop-shadow-lg' /> */}
-                  <h1 className='text-white text-2xl font-semibold'>Lane Focus</h1>
+                  <h1 className='text-white text-2xl font-semibold'>LaneFocus</h1>
                 </Link>
               </li>
               <li onClick={() => handleTabClick('dashboard')}>
@@ -71,13 +71,13 @@ export default function Sidebar() {
                   }}
                 >
                   <AiOutlineUser />
-                  <span className="flex-1 ml-3 whitespace-nowrap">Drivers List</span>
+                  <span className="flex-1 ml-3 whitespace-nowrap">Drivers</span>
                 </NavLink>
               </li>
 
               <li onClick={() => handleTabClick('sellers')}>
                 <NavLink
-                  to='/circles'
+                  to='/administrators'
                   className={({ isActive, isPending }) => {
                     return (
                       isActive ? "flex items-center py-2 px-5 rounded-lg bg-white drop-shadow text-black font-semibold"
@@ -87,7 +87,7 @@ export default function Sidebar() {
                   }}
                 >
                   <HiMiniUsers />
-                  <span className="flex-1 ml-3 whitespace-nowrap">Circles Management</span>
+                  <span className="flex-1 ml-3 whitespace-nowrap">Administrators</span>
                 </NavLink>
               </li>
 
