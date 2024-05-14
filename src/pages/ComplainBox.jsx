@@ -42,7 +42,7 @@ export default function ComplainBox() {
 
   return (
     <div>
-      <Header header={"Complaint Details"} />
+      <Header header={"Complain Details"} />
       <div className="max-w-screen-2xl mx-auto">
         <div className="mx-4 sm:mx-9 my-5">
           <div
