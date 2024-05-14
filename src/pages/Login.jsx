@@ -8,9 +8,9 @@ export default function Login() {
       <div className="h-full w-full  relative">
         <img className="h-full w-full object-cover" alt="background" src="https://images.pexels.com/photos/65911/winter-nature-season-trees-65911.jpeg" />
         <div className="absolute top-0 w-full h-full">
-          <div className="bg-gray-100 w-full backdrop-blur-3xl h-full bg-opacity-30">
+          <div className="bg-white w-full backdrop-blur-3xl h-full bg-opacity-30">
             <div className="w-full h-full flex justify-center items-center">
-              <div className="max-w-sm mx-auto bg-white bg-opacity-10 border-2 border-gray-500 border-opacity-30 drop-shadow-xl shadow-xl w-full p-5 rounded-md py-10 space-y-3 md:space-y-5">
+              <div className="max-w-sm mx-auto bg-white bg-opacity-10 border-2 border-gray-500 border-opacity-30 drop-shadow-xl shadow-xl w-full p-5 rounded-lg py-10 space-y-3 md:space-y-5">
                 <h1 className="text-center text-4xl font-bold text-gray-950">LaneFocus</h1>
                 {/* {error && <div className="p-4 mb-4 text-sm font-medium text-red-800 rounded-lg bg-red-200 bg-opacity-25" role="alert">
                   {error}
@@ -43,7 +43,7 @@ export default function Login() {
                     <Link to='/forget-password' className="text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">Forgot password?</Link>
                   </div>
                   <Link to={'/'}>
-                    <button type="button" className="w-full text-white bg-gray-250 hover:bg-gray-150 focus:ring-1 focus:outline-none focus:ring-gray-250 font-semibold rounded-lg text-sm px-5 py-2.5 text-center">Sign in</button>
+                    <button type="button" className="w-full text-black bg-gray-400 hover:bg-gray-500 focus:ring-1 focus:outline-none focus:ring-gray-250 font-semibold rounded-lg text-sm px-5 py-2.5 text-center">Sign in</button>
                   </Link>
                   {/* {loading ?
                     <button disabled className="w-full text-white bg-gray-250 hover:bg-gray-150 focus:ring-1 focus:outline-none focus:ring-gray-250 font-semibold rounded-lg text-sm px-5 py-2.5 text-center">Loading...</button>

@@ -7,19 +7,19 @@ export default function Administrators() {
       id: 1,
       name: "Administrator 1",
       plan: "$ Monthly",
-      circles: "3",
+      drivers: "3",
     },
     {
       id: 2,
       name: "Administrator 2",
       plan: "$ Weekly",
-      circles: "3",
+      drivers: "5",
     },
     {
       id: 3,
       name: "Administrator 3",
       plan: "$ Yearly",
-      circles: "3",
+      drivers: "2",
     },
    
       
@@ -27,7 +27,7 @@ export default function Administrators() {
 
   return (
     <div>
-      <Header header={"Manage Adminintrators"} />
+      <Header header={"Manage Administrators"} />
       <div className="max-w-screen-2xl mx-auto">
         <div className="mx-4 sm:mx-9 my-3">
           <div className="my-10">
@@ -42,10 +42,13 @@ export default function Administrators() {
                       Plan
                     </th>
                     <th scope="col" className="px-6 py-3 ">
-                      #No of Circles
+                      #No of Drivers
                     </th>
                     <th scope="col" className="px-6 py-3">
-                      Details
+                     Driver's Info
+                    </th>
+                    <th scope="col" className="px-6 py-3">
+                      Profile
                     </th>
                   </tr>
                 </thead>
@@ -60,13 +63,22 @@ export default function Administrators() {
                         {admin.name}
                       </td>
                       <td className="px-6 py-4">{admin.plan}</td>
-                      <td className="px-16 py-4 ">{admin.circles}</td>
-                      <td className="px-6 py-4">
+                      <td className="px-16 py-4 ">{admin.drivers}</td>
+                      
+                      <td className="px-10 py-4">
                         <Link
                           to={`/administrators/details/${admin.id}`}
                           className="font-medium bg-primary text-black  px-3 py-1 rounded-md hover:text-gray-250 bg-opacity-20"
                         >
                           Details
+                        </Link>
+                      </td>
+                      <td className="px-6 py-4">
+                        <Link
+                          to={`/administrators/profile/${admin.id}`}
+                          className="font-medium bg-gray-400 text-black  px-3 py-1 rounded-md hover:text-gray-250 bg-opacity-50"
+                        >
+                          View
                         </Link>
                       </td>
                     </tr>

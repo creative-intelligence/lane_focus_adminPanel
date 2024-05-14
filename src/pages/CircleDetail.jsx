@@ -55,7 +55,7 @@ export default function CircleDetail() {
 
   return (
     <div>
-      <Header header={"Circle Details"} />
+      <Header header={"List of Drivers"} />
       <div className="max-w-screen-2xl mx-auto">
         <div className="mx-4 sm:mx-9 my-3">
           <div className="my-10">

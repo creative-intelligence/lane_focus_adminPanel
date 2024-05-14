@@ -66,7 +66,7 @@ export default function Circles() {
                       </td>
                       <td className="px-6 py-4">
                         <Link
-                          to={`/administrators/circles/details/${circle.id}`}
+                          to={`/administrators/details/${circle.id}`}
                           className="font-medium bg-primary text-black  px-3 py-1 rounded-md hover:text-gray-250 bg-opacity-20"
                         >
                           Details

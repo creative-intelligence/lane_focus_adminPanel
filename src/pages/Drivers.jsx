@@ -57,7 +57,7 @@ export default function Drivers() {
                       Phone
                     </th>
                     <th scope="col" className="px-6 py-3">
-                      Actions
+                     Profile
                     </th>
                   </tr>
                 </thead>
@@ -79,9 +79,9 @@ export default function Drivers() {
                       <td className="px-6 py-4 space-x-2">
                         <Link
                           to={`/drivers/details/${driver.id}`}
-                          className="font-medium bg-primary text-black  px-3 py-1 rounded-md hover:text-gray-250 bg-opacity-20"
+                          className="font-medium bg-gray-400 text-black  px-3 py-1 rounded-md hover:text-gray-250 bg-opacity-50"
                         >
-                          Details
+                          View
                         </Link>
                       </td>
                     </tr>

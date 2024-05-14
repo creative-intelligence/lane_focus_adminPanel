@@ -11,6 +11,7 @@ import ComplainBox from "./pages/ComplainBox";
 import Profile from "./pages/AdminProfile";
 import Administrators from "./pages/Administrators";
 import Login from "./pages/Login";
+import AdministratorProfile from "./pages/AdministratorProfile";
 
 function App() {
   return (
@@ -22,8 +23,8 @@ function App() {
             <Route path="/drivers" element={<Drivers />} />
             <Route path="/drivers/details/:id" element={<DriverProfile />} />
             <Route path="/administrators" element={<Administrators />} />
-            <Route path="/administrators/details/:id" element={<Circles />} />
-            <Route path="/administrators/circles/details/:id" element={<CircleDetail />}/>
+            <Route path="/administrators/profile/:id" element={<AdministratorProfile />} />
+            <Route path="/administrators/details/:id" element={<CircleDetail />}/>
             <Route path="/complains" element={<Complains />} />
             <Route path="/complains/details/:id" element={<ComplainBox />} />
             <Route path="/content" element={<Content />} />
