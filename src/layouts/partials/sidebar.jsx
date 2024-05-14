@@ -120,6 +120,14 @@ export default function Sidebar() {
               </li>
 
             </ul>
+            <div>
+              <Link to={'/login'}>
+                <div className='flex items-center px-5 py-2 rounded-lg text-white gap-2.5 cursor-pointer font-medium hover:bg-white/20 drop-shadow hover:text-white hover:font-medium'>
+                  <RiLogoutCircleLine />
+                  <p>Logout</p>
+                </div>
+              </Link>
+            </div>
            
           </div>
         </div>
