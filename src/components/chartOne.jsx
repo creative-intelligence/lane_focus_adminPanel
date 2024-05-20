@@ -11,28 +11,28 @@ export default function ChartOne({ dateRange, onDateRangeChange, aggregationType
 
   const dummyData = {
     dateRanges: ["05.01.2023 - 05.31.2023", "06.01.2023 - 06.30.2023"],
-    aggregationTypes: ["monthly", "daily"],
+    aggregationTypes: ["Monthly", "Daily"],
     dataTypes: ["Total Users", "Drivers", "Administrators"],
     chartData: {
       "05.01.2023 - 05.31.2023": {
-        "monthly": {
+        "Monthly": {
           "Total Users": [30, 25, 36, 30, 45, 35, 64, 52, 59, 36, 39, 51],
           "Drivers": [20, 15, 26, 20, 35, 25, 54, 42, 49, 26, 29, 41],
           "Administrators": [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
         },
-        "daily": {
+        "Daily": {
           "Total Users": [5,4,10,5,2,7,9,0,2,12,9,12,11],
           "Drivers": [3,2,6,3,1,4,5,0,1,7,5,7,6],
           "Administrators": [2,2,4,2,1,3,4,0,1,5,4,5,5]
         }
       },
       "06.01.2023 - 06.30.2023": {
-        "monthly": {
+        "Monthly": {
           "Total Users": [40, 35, 46, 40, 55, 45, 74, 62, 69, 46, 49, 61],
           "Drivers": [25, 20, 31, 25, 40, 30, 59, 47, 54, 31, 34, 46],
           "Administrators": [15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15]
         },
-        "daily": {
+        "Maily": {
           "Total Users": [6,5,11,6,3,8,10,1,3,13,10,13,12],
           "Drivers": [4,3,7,4,2,5,6,0,2,8,6,8,7],
           "Administrators": [2,2,4,2,1,3,4,0,1,5,4,5,5]
@@ -43,7 +43,7 @@ export default function ChartOne({ dateRange, onDateRangeChange, aggregationType
   
   useEffect(() => {
     const newData = dummyData.chartData[dateRange][aggregationType][dataType];
-    const xAxisCategories = aggregationType === 'monthly' ? ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'] : Array.from({ length: newData.length }, (_, i) => `${i + 1}`);
+    const xAxisCategories = aggregationType === 'Monthly' ? ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'] : Array.from({ length: newData.length }, (_, i) => `${i + 1}`);
 
     setOptions({
       legend: {

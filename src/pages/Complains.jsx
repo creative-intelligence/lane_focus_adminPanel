@@ -40,7 +40,7 @@ export default function Complains() {
 
   return (
     <div>
-      <Header header={"Complains/Reports"} />
+      <Header header={"Complaints and Reports"} />
       <div className="max-w-screen-2xl mx-auto overflow-x-auto drop-shadow-xl">
         <div className="mx-4 sm:mx-9 my-5">
           <div className="flex flex-col w-full bg-white py-3 px-3 rounded-lg sm:w-auto sm:flex-row sm:items-center gap-4">

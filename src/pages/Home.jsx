@@ -10,7 +10,7 @@ import ChartOne from "../components/chartOne";
 
 export default function Home() {
   const [dateRange, setDateRange] = useState("05.01.2023 - 05.31.2023");
-  const [aggregationType, setAggregationType] = useState("monthly");
+  const [aggregationType, setAggregationType] = useState("Monthly");
   const [dataType, setDataType] = useState("Total Users");
 
   const handleDateRangeChange = (range) => {
@@ -43,9 +43,9 @@ export default function Home() {
                       Drivers
                     </span>
                   </div>
-                  <span className="flex items-center gap-1 text-sm font-medium text-green-500">
+                  {/* <span className="flex items-center gap-1 text-sm font-medium text-green-500">
                     0.43%
-                  </span>
+                  </span> */}
                 </div>
               </div>
             </Link>
@@ -61,13 +61,13 @@ export default function Home() {
                       Administrators
                     </span>
                   </div>
-                  <span className="flex items-center gap-1 text-sm font-medium text-green-500">
+                  {/* <span className="flex items-center gap-1 text-sm font-medium text-green-500">
                     0.43%
-                  </span>
+                  </span> */}
                 </div>
               </div>
             </Link>
-            <Link to="/content" className="w-full">
+            {/* <Link to="/content" className="w-full">
               <div className="rounded-sm border border-stroke bg-white py-6 px-7 shadow-lg">
                 <div className="flex h-11 w-11 items-center justify-center rounded-full bg-black bg-opacity-10">
                   <IoSettingsSharp className="w-6 h-6 text-gray-250" />
@@ -84,7 +84,7 @@ export default function Home() {
                   </span>
                 </div>
               </div>
-            </Link>
+            </Link> */}
           </div>
 
           <div className="mt-5 grid grid-cols-12 gap-4 md:gap-6 2xl:gap-7">

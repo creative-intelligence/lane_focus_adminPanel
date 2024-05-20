@@ -102,7 +102,7 @@ export default function Sidebar() {
                   }
                 >
                   <BsCalendar2Event />
-                  <span className="flex-1 ml-3 whitespace-nowrap">Complains/Reports</span>
+                  <span className="flex-1 ml-3 whitespace-nowrap">Complaints and Reports</span>
                 </NavLink>
               </li>
               <li onClick={() => handleTabClick('dashboard')}>
